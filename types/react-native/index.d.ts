@@ -7231,7 +7231,13 @@ export interface CameraRollStatic {
     saveImageWithTag(tag: string): Promise<string>;
 
     /**
+     * Deletes photos from CameraRoll (iOS only)
+     * 
+     * @param photos the assets-library tags of the photos to delete
+     * 
+     * Returns a Promise which will resolve with true if deletion was successful or false otherwise.
      */
+    deletePhotos(photos:string[]): Promise<boolean>;
 
     /**
      * Saves the photo or video to the camera roll / gallery.
